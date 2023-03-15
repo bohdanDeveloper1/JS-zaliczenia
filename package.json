@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "watch": "npx laravel-mix watch",
+    "build": "npx laravel-mix build",
+    "prod": "npx laravel-mix --production",
     "serve": "npx http-server public --port 80"
   },
   "author": "Jakub Bilski <jakub.bilski@apsl.edu.pl>",
