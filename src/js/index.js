@@ -1,15 +1,25 @@
-import sayHello, {helloSunshine, allBest} from './lib/hello';
-import initChangeHeader from './lib/changeHeader';
-import initChangeHeaderOnClick from './lib/changeHeaderOnClick';
-import initCookies from './lib/cookies';
-import initMenu from './lib/menu';
+function initializeGame() {
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            if (button.classList.contains('mine')) {
+            // end game
+                button.classList.add('mine-clicked');
+                alert('Game over!');
+                location.reload();
+            } else {
+                //Empty field clicked - reveal adjacent fields
+              showCell(button);
+            }
+        });
+    });
+}
 
-sayHello();
-helloSunshine();
-allBest();
+function showCell(button) {
+    if (button.classList.contains('save')) {
+        button.classList.add('show-save');
+    }
+}
 
-initChangeHeader();
-initChangeHeaderOnClick();
 
-initCookies();
-initMenu();
+initializeGame();
