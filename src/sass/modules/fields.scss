@@ -1,3 +1,13 @@
+button {
+  height: 40px;
+  width: 40px;
+}
+.game{
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+}
 .fields_row{
   display: flex;
 }
@@ -6,4 +16,19 @@
 }
 .show-save {
   background-color: lightgreen;
+}
+.reveal{
+  background-color: lightgreen;
+}
+.try_again{
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  width: 100px;
+  background-color: lightgreen;
+  display: none;
+}
+.try_again_active{
+  display: block;
 }
